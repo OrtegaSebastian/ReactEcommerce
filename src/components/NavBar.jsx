@@ -1,12 +1,14 @@
 import React from 'react'
-import { Container, LogoContainer, Menu,MenuItem, MenuItemLink, Wrapper } from './NavBarComponents'
+import { Container, Menu,MenuItem, MenuItemLink, Wrapper } from './NavBarComponents'
+import {LogoContainer} from '../components/CartWidget/CartWidget'
+
 
 const NavBar = () => {
   return (
     <Container>
         <Wrapper>
             <LogoContainer>
-            
+              
             </LogoContainer>
 
             <Menu>
