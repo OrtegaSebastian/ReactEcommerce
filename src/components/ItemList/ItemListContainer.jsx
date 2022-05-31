@@ -1,12 +1,12 @@
 //SALUDO
+import React from 'react'
 
-function Saludar(){
-        let saludo = 'Bienvenido a mi pagina de react'
+const ItemListConstainer =({greetings})=>{
         return(
-           saludo
-            
+                <div>{greetings}</div>     
+                
         )
 }
 
 
-export default Saludar ;
+export default ItemListConstainer ;

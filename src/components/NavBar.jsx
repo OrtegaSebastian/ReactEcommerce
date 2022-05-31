@@ -1,15 +1,15 @@
 import React from 'react'
 import { Container, Menu,MenuItem, MenuItemLink, Wrapper } from './NavBarComponents'
-import {LogoContainer} from '../components/CartWidget/CartWidget'
+import CartWidget from './CartWidget/CartWidget'
 
 
 const NavBar = () => {
   return (
     <Container>
         <Wrapper>
-            <LogoContainer>
+            <CartWidget>
               
-            </LogoContainer>
+            </CartWidget>
 
             <Menu>
                 <MenuItem>
