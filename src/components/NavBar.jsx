@@ -3,6 +3,12 @@ import { Container, Menu,MenuItem, MenuItemLink, Wrapper } from './NavBarCompone
 import CartWidget from './CartWidget/CartWidget'
 
 
+// Chicos muy importante para esta entrega, 
+// es definir un state en el container y luego usando 
+// el set desde el contador pasar ese valor al container
+
+
+
 const NavBar = () => {
   return (
     <Container>
