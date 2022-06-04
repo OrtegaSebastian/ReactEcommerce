@@ -2,12 +2,12 @@ import{useState} from 'react'
 
 function Contar({stock, inicial, onAdd}){
         let [cantidad, setCantidad] = useState(inicial);
-        let [mostrar, setMostrar] = useState(true) 
+        let [ mostrar  , setMostrar] = useState(true) 
         const  aumentarCantidad= ()=>{
-    if(cantidad >=stock) setCantidad(cantidad +1 );
+    if(cantidad <= stock) setCantidad(cantidad++ );
     };
     const  disminuirCantidad= ()=>{
-        if(cantidad >=inicial) setCantidad(cantidad -1 );
+        if(cantidad >=inicial) setCantidad(cantidad--);
     };
     
     const agregarProducto =()=>{
