@@ -11,8 +11,8 @@ import Contar from './components/ItemCount/ItemCount';
     return<>
     
     <NavBar />
-    <ItemListContainer greetings = "Hola soy un ItemListContainer"/>
-    <Contar stock={10} inicial={1} />
+    <ItemListContainer />
+  
     </>
   }
 export default App;
