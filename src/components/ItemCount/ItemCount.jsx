@@ -27,12 +27,11 @@ function Contar({stock, inicial, onAdd}){
         </div>    
         <button on onClick={agregarProducto}>Agregar al carrito</button>    
         </div>    
-       
+    
     <button>Ir al carrito</button> 
     </>    
     
 )
 }
-
 
 export default Contar;

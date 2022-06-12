@@ -9,6 +9,7 @@ const Item = ({ producto }) => {
       <p>{marca}</p>
       <p>{precio}</p>
       <p>{stock}</p>
+      <p>{}</p>
       <Contar stock={stock} inicial={1} />
     </div>
   );
