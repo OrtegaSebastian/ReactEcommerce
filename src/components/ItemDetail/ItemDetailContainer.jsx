@@ -19,7 +19,7 @@ const ItemDetailContainer =()=>{
   })
     return (
       <div>
-        <ItemDetail producto={producto.id}/>
+        <ItemDetail producto={producto}/>
       </div>
     )
   
