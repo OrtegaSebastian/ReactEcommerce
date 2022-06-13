@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Menu,MenuItem, MenuItemLink, Wrapper } from './NavBarComponents'
+import { Container, Menu,MenuItem, Wrapper } from './NavBarComponents'
 import CartWidget from './CartWidget/CartWidget'
-
+import { Link, NavLink } from 'react-router-dom'
 
 // Chicos muy importante para esta entrega, 
 // es definir un state en el container y luego usando 
@@ -12,31 +12,32 @@ import CartWidget from './CartWidget/CartWidget'
 const NavBar = () => {
   return (
     <Container>
+      
         <Wrapper>
-            <CartWidget>
-              
-            </CartWidget>
-
-            <Menu>
+            <Link to = "/Cart">
+              <button className='btn btn-outline-primary'>
+                <CartWidget>
+                </CartWidget>
+              </button>
+            </Link>
+           <Menu>
                 <MenuItem>
-                <MenuItemLink>
-                INICIO
-                </MenuItemLink>
+                <NavLink to="/" className={({isActive})=>isActive? "text-red": "clase2"}>INICIO</NavLink>
                 </MenuItem>
                 <MenuItem>
-                <MenuItemLink>
+                <NavLink to="/sobrelaempresa">
                 SOBRE LA EMPRESA
-                </MenuItemLink>
+                </NavLink>
                 </MenuItem>
                 <MenuItem>
-                <MenuItemLink>
+                <NavLink to ="/productos">
                 PRODUCTOS      
-                </MenuItemLink>
+                </NavLink>
                 </MenuItem>
                 <MenuItem>
-                <MenuItemLink>
+                <NavLink to ="Contacto">
                 CONTACTO
-                </MenuItemLink>
+                </NavLink>
                 </MenuItem>
             </Menu>
         </Wrapper>

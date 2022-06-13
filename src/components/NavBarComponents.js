@@ -8,6 +8,6 @@ export const Menu = styled.ul``;
 
 export const MenuItem = styled.li``;
 
-export const MenuItemLink = styled.a``;
+
 
 

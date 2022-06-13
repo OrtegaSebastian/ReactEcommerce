@@ -1,20 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/NavBar";
 import ItemListContainer from './components/ItemList/ItemListContainer';
-import CartWidget from './components/CartWidget/CartWidget'
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-
-
-
+import Cart from './components/Cart/Cart'
+import ItemCount from './components/ItemCount/ItemCount'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 
   function App() {
-  return<>
+  return(
+  <BrowserRouter>
     <NavBar />
-    <ItemListContainer/>
-    <CartWidget/>
-    <ItemDetailContainer/>
+  <Routes>
+    <Route index path="/" element={<ItemListContainer/>}/>
+    <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+    <Route path="/cart" element={<Cart/>}/>
 
-  </>
+    <Route path="*" element={<Navigate to ="/"/>}/>
+    
+  </Routes>
+    
+  <ItemCount/>
+  </BrowserRouter>
+  )
 }
+
+
 export default App;

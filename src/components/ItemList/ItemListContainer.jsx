@@ -12,7 +12,7 @@ const listaProductos = [
   },
   {
     id: "2",
-    nombre: "Azcuar",
+    nombre: "Azucar",
     marca: "chamigo",
     precio: 50,
     stock: 10,
