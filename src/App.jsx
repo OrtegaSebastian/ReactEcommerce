@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
-import ItemCount from './components/ItemCount/ItemCount'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 
@@ -19,8 +18,7 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
     <Route path="*" element={<Navigate to ="/"/>}/>
     
   </Routes>
-    
-  <ItemCount/>
+  
   </BrowserRouter>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ItemList from "./ItemList";
+import ItemList from "../ItemList/ItemList";
 
 const listaProductos = [
   {

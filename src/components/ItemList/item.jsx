@@ -14,7 +14,7 @@ const Item = ({ producto }) => {
         </div>
         <div>Precio{precio}</div>  
       <div className="card-body">
-        <img src={producto.pictureUrl} alt="foto" className="w-50"/>
+        <img src={pictureUrl} alt="foto" className="w-50"/>
         <p>{descripcion}</p>
       </div>
       <Contar stock={stock} inicial={1} />
