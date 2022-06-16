@@ -1,48 +1,29 @@
 import React from 'react'
-import { Container, Menu,MenuItem, Wrapper } from './NavBarComponents'
+import { Nav, Menu  } from './NavBarComponents'
 import CartWidget from './CartWidget/CartWidget'
-import { Link, NavLink } from 'react-router-dom'
-
-// Chicos muy importante para esta entrega, 
-// es definir un state en el container y luego usando 
-// el set desde el contador pasar ese valor al container
+import { Link } from 'react-router-dom'
 
 
 
 const NavBar = () => {
   return (
-    <Container>
-      
-        <Wrapper>
-            <Link to = "/Cart">
-              <button className='btn btn-outline-primary'>
-                <CartWidget>
-                </CartWidget>
-              </button>
-            </Link>
-           <Menu>
-                <MenuItem>
-                <NavLink to="/" className={({isActive})=>isActive? "text-red": "clase2"}>INICIO</NavLink>
-                </MenuItem>
-                <MenuItem>
-                <NavLink to="/sobrelaempresa">
-                SOBRE LA EMPRESA
-                </NavLink>
-                </MenuItem>
-                <MenuItem>
-                <NavLink to ="/productos">
-                PRODUCTOS      
-                </NavLink>
-                </MenuItem>
-                <MenuItem>
-                <NavLink to ="Contacto">
-                CONTACTO
-                </NavLink>
-                </MenuItem>
-            </Menu>
-        </Wrapper>
-    </Container>
-  )
+    <Nav>
+      <Link to="/Cart">
+        <CartWidget></CartWidget>
+      </Link>
+      <Menu>
+        <Link to="/">INICIO</Link>
+
+        <Link to="/sobrelaempresa">SOBRE LA EMPRESA</Link>
+
+        <Link to="/category/almacen">ALMACEN</Link>
+
+        <Link to="/category/ferreteria">FERRETERIA</Link>
+
+        <Link to="Contacto">CONTACTO</Link>
+      </Menu>
+    </Nav>
+  );
 }
 
 export default NavBar

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 const listaProductos = [
   {
@@ -9,6 +10,7 @@ const listaProductos = [
     precio: 80,
     stock: 5,
     pictureUrl: "www.blabla.com",
+    category:"almacen"
   },
   {
     id: "2",
@@ -17,6 +19,7 @@ const listaProductos = [
     precio: 50,
     stock: 10,
     pictureUrl: "www.blabla2.com",
+    category:"almacen"
   },
   {
     id: "3",
@@ -25,6 +28,7 @@ const listaProductos = [
     precio: 80,
     stock: 5,
     pictureUrl: "www.blabla3.com",
+    category:"almacen"
   },
   {
     id: "4",
@@ -33,6 +37,7 @@ const listaProductos = [
     precio: 600,
     stock: 5,
     pictureUrl: "www.blabla4.com",
+    category:"almacen"
   },
   {
     id: "5",
@@ -41,6 +46,7 @@ const listaProductos = [
     precio: 180,
     stock: 15,
     pictureUrl: "www.blabla5.com",
+    category:"ferreteria"
   },
   {
     id: "6",
@@ -49,12 +55,14 @@ const listaProductos = [
     precio: 280,
     stock: 8,
     pictureUrl: "www.blabla6.com",
+    category:"almacen"
   },
 ];
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(false);
+  const {id} = useParams()
 
   useEffect(() => {
     const promise = new Promise((res, rej) => {
@@ -64,15 +72,20 @@ const ItemListContainer = () => {
     });
     promise
       .then((res) => {
-        setProductos(res);
+        setProductos(id?res.filter((product)=> product.category === id):res);
         setLoading(true);
       })
       .catch((err) => console.log(err));
-  }, []);
+
+      return(()=>{
+        setLoading(false)
+      })
+  }, [id]);
 
   return (
     <div>
       {!loading ? <p>...Cargando</p> : <ItemList productos={productos} />}
+      {console.log(id)}
     </div>
   );
 };

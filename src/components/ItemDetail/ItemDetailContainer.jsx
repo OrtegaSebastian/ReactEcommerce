@@ -9,7 +9,7 @@ const listaProductos = [
     marca: "cañuelas",
     precio: 80,
     stock: 5,
-    pictureUrl: "www.blabla.com",
+    pictureUrl: {"imageC": "../assets/images/aceite.jpg"},
   },
   {
     id: "2",
