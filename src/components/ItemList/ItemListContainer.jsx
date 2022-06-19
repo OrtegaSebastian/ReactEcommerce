@@ -9,16 +9,16 @@ const listaProductos = [
     marca: "cañuelas",
     precio: 80,
     stock: 5,
-    pictureUrl: "www.blabla.com",
+    pictureUrl: "../Assets/aceite.jpg" ,
     category:"almacen"
   },
   {
     id: "2",
     nombre: "Azucar",
-    marca: "chamigo",
+    marca: "ledesma",
     precio: 50,
     stock: 10,
-    pictureUrl: "www.blabla2.com",
+    pictureUrl: "../Assets/azucar.jpeg",
     category:"almacen"
   },
   {
@@ -27,35 +27,44 @@ const listaProductos = [
     marca: "Salado",
     precio: 80,
     stock: 5,
-    pictureUrl: "www.blabla3.com",
+    pictureUrl: "../Assets/sal.jpeg",
     category:"almacen"
   },
   {
     id: "4",
-    nombre: "Yerba",
-    marca: "Sinceridad",
+    nombre: "Tomate",
+    marca: "tomate",
     precio: 600,
     stock: 5,
-    pictureUrl: "www.blabla4.com",
-    category:"almacen"
+    pictureUrl: "../Assets/tomates.jpg",
+    category:"verduleria"
   },
   {
     id: "5",
-    nombre: "Foco",
-    marca: "Ilumninaty",
+    nombre: "Pan",
+    marca: "Pan",
     precio: 180,
     stock: 15,
-    pictureUrl: "www.blabla5.com",
-    category:"ferreteria"
+    pictureUrl: "../Assets/pan.jpg",
+    category:"panaderia"
   },
   {
     id: "6",
-    nombre: "Agua",
-    marca: "Saciedad",
+    nombre: "Huevo",
+    marca: "Gallo",
     precio: 280,
     stock: 8,
-    pictureUrl: "www.blabla6.com",
+    pictureUrl: "../Assets/huevos.jpg",
     category:"almacen"
+  },
+  {
+    id: "7",
+    nombre: "foco",
+    marca: "iluminar",
+    precio: 280,
+    stock: 8,
+    pictureUrl: "../Assets/foco.png",
+    category:"ferreteria"
   },
 ];
 

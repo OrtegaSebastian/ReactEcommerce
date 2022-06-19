@@ -6,13 +6,13 @@ const Item = ({ producto }) => {
   const { nombre, marca, precio,pictureUrl,id, descripcion } = producto;
   return (
     <div
-        className="col-md-4 p-1"
+        className="col-md-5 p-5"
     >
       <div className="card w-100 mt5">
         <div className="card-header">
-          {`${nombre} - ${marca}`}  
+         <h3 className="m-2 p-1"> {`${nombre} - ${marca}`}</h3>  
         </div>
-        <div>Precio{precio}</div>  
+        <h5 className="m-3">Precio del producto =   {precio}</h5>  
       <div className="card-body">
         <img src={pictureUrl} alt="foto" className="w-50"/>
         <p>{descripcion}</p>

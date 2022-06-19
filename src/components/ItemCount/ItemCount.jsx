@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Contar({ stock, inicial, onAdd }) {
 
 
@@ -31,7 +32,10 @@ function Contar({ stock, inicial, onAdd }) {
         <button onClick={agregarItem}>Agregar al carrito</button>
       </div>
 
-      <button>Ir al carrito</button>
+      
+        <button>Ir al carrito</button>
+     
+     
     </>
   );
 }
