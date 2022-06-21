@@ -1,57 +1,73 @@
 import {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router';
+import listaProductos from "../ItemList/ItemListContainer"
 
-const listaProductos = [
-  {
-    id: "1",
-    nombre: "Aceite",
-    marca: "cañuelas",
-    precio: 80,
-    stock: 5,
-    pictureUrl: {"imageC": "../assets/images/aceite.jpg"},
-  },
-  {
-    id: "2",
-    nombre: "Azucar",
-    marca: "chamigo",
-    precio: 50,
-    stock: 10,
-    pictureUrl: "www.blabla2.com",
-  },
-  {
-    id: "3",
-    nombre: "Sal",
-    marca: "Salado",
-    precio: 80,
-    stock: 5,
-    pictureUrl: "www.blabla3.com",
-  },
-  {
-    id: "4",
-    nombre: "Yerba",
-    marca: "Sinceridad",
-    precio: 600,
-    stock: 5,
-    pictureUrl: "www.blabla4.com",
-  },
-  {
-    id: "5",
-    nombre: "Foco",
-    marca: "Ilumninaty",
-    precio: 180,
-    stock: 15,
-    pictureUrl: "www.blabla5.com",
-  },
-  {
-    id: "6",
-    nombre: "Agua",
-    marca: "Saciedad",
-    precio: 280,
-    stock: 8,
-    pictureUrl: "www.blabla6.com",
-  },
-];
+// const listaProductos = [
+//   {
+//     id: "1",
+//     nombre: "Aceite",
+//     marca: "cañuelas",
+//     precio: 80,
+//     stock: 5,
+//     pictureUrl: "../Assets/aceite.jpg" ,
+//     category:"almacen"
+//   },
+//   {
+//     id: "2",
+//     nombre: "Azucar",
+//     marca: "ledesma",
+//     precio: 50,
+//     stock: 10,
+//     pictureUrl: "../Assets/azucar.jpeg",
+//     category:"almacen"
+//   },
+//   {
+//     id: "3",
+//     nombre: "Sal",
+//     marca: "Salado",
+//     precio: 80,
+//     stock: 5,
+//     pictureUrl: "../Assets/sal.jpeg",
+//     category:"almacen"
+//   },
+//   {
+//     id: "4",
+//     nombre: "Tomate",
+//     marca: "tomate",
+//     precio: 600,
+//     stock: 5,
+//     pictureUrl: "../Assets/tomates.jpg",
+//     category:"verduleria"
+//   },
+//   {
+//     id: "5",
+//     nombre: "Pan",
+//     marca: "Pan",
+//     precio: 180,
+//     stock: 15,
+//     pictureUrl: "../Assets/pan.jpg",
+//     category:"panaderia"
+//   },
+//   {
+//     id: "6",
+//     nombre: "Huevo",
+//     marca: "Gallo",
+//     precio: 280,
+//     stock: 8,
+//     pictureUrl: "../Assets/huevos.jpg",
+//     category:"almacen"
+//   },
+//   {
+//     id: "7",
+//     nombre: "foco",
+//     marca: "iluminar",
+//     precio: 280,
+//     stock: 8,
+//     pictureUrl: "../Assets/foco.png",
+//     category:"ferreteria"
+//   },
+// ];
 
 
 

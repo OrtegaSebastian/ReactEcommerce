@@ -1,26 +1,28 @@
-import { useCartContext } from "../contexts/CartContext";
-import Contar from "../ItemCount/ItemCount";
+import   {CartContext}   from "../contexts/CartContext";
+import Contar from "../ItemCount/ItemCount"; 
+import{React, useContext} from "react";
 
-const ItemDetail = ({ producto }) => {
-  const { nombre, marca, precio, stock } = producto;
- 
-  const {cart,addToCart} = useCartContext();
+
+const ItemDetail = ({ item }) => {
+  const { nombre, marca, pictureUrl, precio, stock, inicial  } = item;
+  
+  const {AddToCart} = useContext(CartContext);
   
   const onAdd = (cantidad) => {
-    console.log(`se han comprado ${cantidad} productos`);
-    addToCart({...producto,cantidad : cantidad})
+    
+    AddToCart(item,cantidad );
   };
-  console.log(cart)
+  
   return (
     <>
       <div className="col-md6">
         <h2>{nombre}</h2>
         <h3>{marca}</h3>
-        <h4>{precio}</h4>
-        <p>stock = {stock}</p>
-        
+        <img src={pictureUrl} alt={nombre} />
+        <h4>Precio ${precio}</h4>
+      <Contar stock={stock} inicial={inicial} onAdd={onAdd} />
+        <p>Unidades disponibles = {stock}</p>
       </div>
-      <Contar stock={stock} inicial={1} onAdd={onAdd} />
     </>
   );
 };

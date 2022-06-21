@@ -4,13 +4,11 @@ import ItemListContainer from "./components/ItemList/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {  CartContextProvider } from "./components/contexts/CartContext";
+import  CartContextProvider  from "./components/contexts/CartContext";
 
 function App() {
   return (
-    <CartContextProvider
-    // value={}
-    >
+    <CartContextProvider>
       
     <BrowserRouter>
       <NavBar />

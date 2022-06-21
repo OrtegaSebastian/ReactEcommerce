@@ -1,24 +1,29 @@
-import { useCartContext } from "../contexts/CartContext";
-import vaciarCarrito from "../contexts/CartContext"
+import { CartContext } from "../contexts/CartContext";
+import { useContext } from "react";
+import CartItem from "./CartItem";
 
 const Cart = () => {
-  const {cart }  = useCartContext();
+  const { cart, VaciarCarrito, PrecioTotal, IconCart } = useContext(CartContext);
+    
 
   return (
+    <>
     <div>
-    <ul>
-        {
-            cart.map(Item => <li key={Item.id}>
-            nombre: {Item.nombre} precio: {Item.precio} cantidad: {Item.cantidad}
-            </li>  )
-        }
-    </ul>
-    <div>
-        {/* <button onClick={vaciarCarrito} >Vaciar Carrito</button> */}
+    {cart.length < 1 ? (
+        <p>Carrito vacio</p>
+    ) : (
+        cart.map((producto) => 
+        <CartItem key={producto.item.id} producto={producto.item} />)
+        )}
     </div>
-</div>
-)
+    <button onClick={VaciarCarrito}> Borrar carrito</button>
+    <p>El precio total de los productos es {PrecioTotal()} </p>
+    {IconCart() < 1 ? 
+    <p> </p>
+    :<p>La cantidad total del carrito es {IconCart()}</p>
+    }
+    </>
+  );
+};
 
-}
-
-export default Cart
+export default Cart;
