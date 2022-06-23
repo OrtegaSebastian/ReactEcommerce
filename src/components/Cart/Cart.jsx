@@ -8,7 +8,7 @@ const Cart = () => {
 
   return (
     <>
-    <div>
+    <div >
     {cart.length < 1 ? (
         <p>Carrito vacio</p>
     ) : (

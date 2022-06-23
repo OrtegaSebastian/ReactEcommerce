@@ -6,13 +6,13 @@ const CartContextProvider = ({children })=>{
     //estados y funciones
     const [cart, setCart] = useState([])
 
-    const addToCart = (item, cantidad)=>{
+    const AddToCart = (item, cantidad)=>{
     
     if(IsInCart(item.id)){
-        alert("el producto ya esta en el carrito")
+        console.log("el producto ya esta en el carrito")
     }else{
         setCart([...cart, {item,cantidad}])
-        alert("se agrego el producto")
+        alert("se agrego el producto", {cantidad})
     }
 }
 
@@ -36,7 +36,7 @@ const IsInCart = (id)=>{
 }
     return(
           
-           <CartContext.Provider value={{ addToCart, cart, VaciarCarrito, DelItem, PrecioTotal, IconCart }}>
+           <CartContext.Provider value={{ AddToCart, cart, VaciarCarrito, DelItem, PrecioTotal, IconCart }}>
            {children}
          </CartContext.Provider>
        );
