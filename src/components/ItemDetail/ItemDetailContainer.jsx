@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router';
 import  {listaProductos} from "../ItemList/ItemListContainer"
+// import {getFirestore} from "firebase/firestore"
 
-
-
+// const [bool, setBool] = useState(true);
 
 const getItem = (id)=> { 
   
@@ -29,5 +29,14 @@ const ItemDetailContainer =()=>{
     )
   
 }
+// useEffect (()=>{
+//   const db = getFirestore()
+//   const queryItem = doc(db, 'items','
+//   GxRzFlZpsFmCgw2ztOH5')
+//   getDoc(queryItem)
+//   .then(resp=> setProducto({id: resp.id,...resp.data()}))
+//   .catch(())
+// },[bool])
+
 
 export default ItemDetailContainer

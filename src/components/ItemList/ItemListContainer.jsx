@@ -33,7 +33,7 @@ export const listaProductos = [
   {
     id: "4",
     nombre: "Tomate",
-    marca: "tomate",
+    marca: "tomates",
     precio: 600,
     stock: 5,
     pictureUrl: "../Assets/tomates.jpg",

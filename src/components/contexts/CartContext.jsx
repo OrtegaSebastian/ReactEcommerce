@@ -9,7 +9,7 @@ const CartContextProvider = ({children })=>{
     const AddToCart = (item, cantidad)=>{
     
     if(IsInCart(item.id)){
-        console.log("el producto ya esta en el carrito")
+        alert("el producto ya esta en el carrito")
     }else{
         setCart([...cart, {item,cantidad}])
         alert("se agrego el producto", {cantidad})
