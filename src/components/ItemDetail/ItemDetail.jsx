@@ -12,7 +12,9 @@ const ItemDetail = ({ item }) => {
     
     AddToCart(item,cantidad );
   };
-  
+
+
+
   return (
     <>
       <div style={{margin:("30px","50px","50px","50px") }} className="col-md6">

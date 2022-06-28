@@ -4,7 +4,25 @@ import CartItem from "./CartItem";
 
 const Cart = () => {
   const { cart, VaciarCarrito, PrecioTotal, IconCart } = useContext(CartContext);
+  
+  function generarOrden(e) {
+    e.PreventDefaul()
+    let orden ={}
+
+    orden.buyer = {producto: 'algo', email: 'nada', numero: '12345'}
+    orden.total = precioTotal();
     
+    orden.items = cartList.map(carItem=>
+      const id = cartItem.id
+      const nombre = cartItem.nombre
+      const precio = cartItem.precio * cartItem.cantidad
+      
+
+      )
+
+    
+  }
+  
 
   return (
     <>
